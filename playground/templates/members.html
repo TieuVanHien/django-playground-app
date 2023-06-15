@@ -4,13 +4,9 @@
     <h1>Members</h1>
     <ul>
       {% for x in members %}
-      <li>{{ x.firstname }} {{ x.lastname }}</li>
-      {% endfor %}
-    </ul>
-    <ul>
-      <h1>Active Members</h1>
-      {% for x in activemembers %}
-      <li>{{ x.firstname }} {{ x.lastname }}</li>
+      <li>
+        <a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a>
+      </li>
       {% endfor %}
     </ul>
   </body>

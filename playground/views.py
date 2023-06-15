@@ -11,3 +11,11 @@ def members(request):
     'activemembers': active_members
   }
   return HttpResponse(template.render(context, request))
+
+def details(request, id):
+  members = Member.objects.get(id=id)
+  template = loader.get_template('details.html')
+  context = {
+    'member': members
+  }
+  return HttpResponse(template.render(context, request))
