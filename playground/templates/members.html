@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Members</h1>
+    <ul>
+      {% for x in members %}
+      <li>{{ x.firstname }} {{ x.lastname }}</li>
+      {% endfor %}
+    </ul>
+    <ul>
+      <h1>Active Members</h1>
+      {% for x in activemembers %}
+      <li>{{ x.firstname }} {{ x.lastname }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

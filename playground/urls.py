@@ -3,5 +3,5 @@ from . import views
 
 #url config
 urlpatterns = [
-    path('', views.say_hello),
+    path('', views.members),
 ]
