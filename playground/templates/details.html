@@ -5,7 +5,9 @@
 
     <p>Phone: {{ member.phone }}</p>
     <p>Member age: {{ member.age }}</p>
+    {% if member.active %}
     <p>Member active status: {{ member.active }}</p>
-    <p>Back to <a href="/">Members</a></p>
+    {% endif %}
+    <p>Back to <a href="/members">Members</a></p>
   </body>
 </html>

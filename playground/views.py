@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.template import loader
+from django.shortcuts import get_object_or_404
 from .models import Member
 
 def members(request):
@@ -13,7 +14,7 @@ def members(request):
   return HttpResponse(template.render(context, request))
 
 def details(request, id):
-  members = Member.objects.get(id=id)
+  members = get_object_or_404(Member, id=id)
   template = loader.get_template('details.html')
   context = {
     'member': members
@@ -23,3 +24,7 @@ def details(request, id):
 def main(request):
   template = loader.get_template('main.html')
   return HttpResponse(template.render())
+
+
+ 
+  
