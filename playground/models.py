@@ -7,3 +7,6 @@ class Member(models.Model):
     phone = models.IntegerField(null=True)
     age = models.IntegerField(null=True)
     active = models.BooleanField(default=True)
+    
+    def __str__(self):
+        return f"{self.firstname} {self.lastname}"
